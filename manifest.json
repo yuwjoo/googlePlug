@@ -1,0 +1,51 @@
+{
+    "name": "个人工具库",
+    "version": "1.0",
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://ke.qq.com/webcourse/*"
+            ],
+            "js": [
+                "modules/tencentClassRoom/index.js"
+            ]
+        },
+        {
+            "matches": [
+                "https://www.baidu.com/s*"
+            ],
+            "js": [
+                "modules/baidu/index.js"
+            ],
+            "css": [
+                "modules/baidu/index.css"
+            ]
+        },
+        {
+            "matches": [
+                "https://thoughts.teambition.com/*"
+            ],
+            "js": [
+                "modules/teambition/index.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs"
+    ],
+    "browser_action": {
+        "default_icon": "image/laodeng.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "image/laodeng.png",
+        "32": "image/laodeng.png",
+        "128": "image/laodeng.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    }
+}
